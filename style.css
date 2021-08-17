@@ -1,0 +1,181 @@
+*{
+    /* Ctrl + \ = html이랑 css 양옆으로 나누기*/
+    /*html 폰트 크기 = 16px*/
+    font-family: 'Noto Sans KR', sans-serif; /*폰트설정*/
+    list-style-type: none; /*목록에 점 없애기*/
+    text-decoration: none; /*바로가기 밑줄, 색깔 없애기*/
+    border-collapse: collapse; /*테이블 경계선 없애기*/
+    margin: 0px;
+    padding:0px; 
+    color: #000;
+}
+.html, .body{
+    width: 100%;
+}
+.wrap{
+    background: rgb(249, 253, 233);
+    height: 500px;
+    width: 100%;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 34px;
+    padding: 12px;
+    font-weight: bold;
+}
+.logo{
+    display: flex;
+    width: 20%;
+    align-items: center;
+    font-size: 24px;
+    letter-spacing: -0.04em;
+    min-width: 200px;
+}
+#logo_icon{
+    color:rgb(31, 34, 33)
+}
+.navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 600px;
+    height: 34px;
+}
+.nav-item{
+    padding: 8px 12px;
+}
+.nav-link{
+    color: rgb(0, 0, 0);
+    transition: 0.5s;
+}
+.nav-link:hover{
+    color:rgb(3, 187, 95);
+    transition: ease-in;
+}
+.divider{
+    height: 17px;
+    border-right: 5px solid springgreen;
+}
+
+.user-menu{
+    width: 16%;
+}
+.user-menu form{
+    display: flex;
+    justify-content: center;
+}
+.login{
+    width: 5rem;
+    border: 0px;
+    background: rgb(0, 0, 0, 0);
+    font-weight: bold;
+}
+.sign-up{
+    background: springgreen;
+    border-radius: 10px;
+    height: 34px;
+    width: 5rem;
+    border: 0px;
+}
+/* intro 끝 */
+.main{
+    display: flex;
+}
+.aside-navbar{
+    margin-left: 18px;
+    width: 88px;
+    margin-top: 100px;
+}
+.aside-nav-item {
+    margin-top: 24px;
+    border-bottom: 1px solid #707070;
+    text-align: left;
+    height: 24px;
+}
+.title{
+    font-size: 86px;
+    font-weight: 1000;
+    padding: 39px 69px 69px 269px;
+    letter-spacing: -0.03em; 
+}
+.subtitle{
+    text-align: right;
+    height: 77px;
+    width: 228px;
+    margin: 300px 0px 0px 157px;
+    font-size: 20px;
+    border-left: 8px solid #000;
+    letter-spacing: -0.05em; 
+}
+/*wrap 끝*/
+.container{
+    padding: 5% 14% 5% 14%;
+    width: 80%;
+    border-top: 2px solid lightgreen;
+}
+.category{
+    display: flex;
+}
+.category-name{
+    width: 4em;
+    height: 38px;
+    border-bottom: 5px solid rgba(148, 146, 146, 0.377);
+    border-radius: 10%;
+}
+.category-item{
+    display: flex;
+    flex-direction: row-reverse;
+}
+.slide{
+    /* display: none; */
+}
+.slidewrap{
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.slidelist{
+    white-space: nowrap;
+    font-size: 0;
+}
+.slidelist > li{
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%;
+    transition: all 0.5s;
+}
+.slidelist > li > a{
+    display: block;
+    position: relative;
+}
+
+.slidelist > li > a > img{
+    width: 50%;
+}
+.slidelist label{
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 50px;
+    cursor: pointer;
+}
+#slide1:checked ~ .slidewrap  .slidelist > li{
+    transform: translateX(0%);
+}
+#slide2:checked ~ .slidewrap  .slidelist > li{
+    transform: translateX(-100%);
+}
+#slide3:checked ~ .slidewrap  .slidelist > li{
+    transform: translateX(-200%);
+}
+.slidelist .left{
+    left: 30px;
+    background: #000;
+}
+.slidelist .right{
+    right: 30px;
+    background: #000;
+}
